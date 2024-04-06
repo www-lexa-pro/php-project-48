@@ -10,7 +10,12 @@
             "src/Formatters.php",
             "src/Formatters/Json.php",
             "src/Formatters/Plain.php",
-            "src/Formatters/Stylish.php"
+            "src/Formatters/Stylish.php",
+            "src/Collection.php",
+            "src/General.php",
+            "src/Invoke.php",
+            "src/Object.php",
+            "src/Strings.php"
         ],
         "psr-4": {
             "Differ\\Tests\\": "tests",
@@ -33,7 +38,6 @@
         "php": ">=7.4.3",
         "docopt/docopt": "^1.0",
         "symfony/yaml": "^5.2",
-        "funct/funct": "^1.5",
         "phpstan/extension-installer": "^1.1.0",
         "phpstan/phpstan": "^0.12.70|^1.10.24"
     },
