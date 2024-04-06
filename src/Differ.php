@@ -1,5 +1,6 @@
 <?php
 // step 5
+// step 6
 namespace Differ\Differ;
 
 use function Funct\Collection\sortBy;
