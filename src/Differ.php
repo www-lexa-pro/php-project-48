@@ -36,7 +36,7 @@ function genAst(object $firstData, object $secondData): array
     $secondKeys = array_keys(get_object_vars($secondData));
     //$unionKeys = union($firstKeys, $secondKeys);
     $unionKeys = array_unique(array_merge($firstKeys, $secondKeys));
-    asort($unionKeys);
+    $unionKeys = sort($unionKeys, fn ($left, $right) => strcmp($left, $right), true);
     $sortedKeys = array_values($unionKeys);
     //$sortedKeys = array_values(asort($unionKeys));
 
@@ -59,7 +59,7 @@ function genAst(object $firstData, object $secondData): array
     return $buildAst;
 }
 
-function makeNode(string $key, string $type, $oldValue, $newValue, $children = null): array
+function makeNode(string $key, string $type, mixed $oldValue, mixed $newValue, mixed $children = null): array
 {
     return [
         'key' => $key,
