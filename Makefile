@@ -1,8 +1,17 @@
 install:
 	composer install
 
-gendiff:
-	./bin/gendiff
+validate:
+	composer validate
 
 lint:
-	composer exec --verbose phpcs -- --standard=PSR12 src bin
+	composer exec -v phpcs -- --standard=PSR12 bin src tests -np
+
+test:
+	composer exec -v phpunit tests
+
+test-coverage:
+	composer exec -v phpunit tests -- --coverage-clover build/logs/clover.xml
+
+gendiff:
+	./bin/gendiff
