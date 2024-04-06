@@ -11,11 +11,11 @@
             "src/Formatters/Json.php",
             "src/Formatters/Plain.php",
             "src/Formatters/Stylish.php",
-            "src/Collection.php",
-            "src/General.php",
-            "src/Invoke.php",
-            "src/Object.php",
-            "src/Strings.php"
+            "src/J/Collection.php",
+            "src/J/General.php",
+            "src/J/Invoke.php",
+            "src/J/Object.php",
+            "src/J/Strings.php"
         ],
         "psr-4": {
             "Differ\\Tests\\": "tests",
