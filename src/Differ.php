@@ -2,7 +2,7 @@
 
 namespace Differ\Differ;
 
-use function Functional\sort;
+use function Functional\sort as ssort;
 //use function Funct\Collection\sortBy;
 //use function Funct\Collection\union;
 use function Differ\Parsers\parse;
@@ -36,7 +36,7 @@ function genAst(object $firstData, object $secondData): array
     $secondKeys = array_keys(get_object_vars($secondData));
     //$unionKeys = union($firstKeys, $secondKeys);
     $unionKeys = array_unique(array_merge($firstKeys, $secondKeys));
-    $unionKeys = sort($unionKeys, fn ($left, $right) => strcmp($left, $right), true);
+    $unionKeys = ssort($unionKeys, fn ($left, $right) => strcmp($left, $right), true);
     $sortedKeys = array_values($unionKeys);
     //$sortedKeys = array_values(asort($unionKeys));
 
